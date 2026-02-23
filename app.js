@@ -5,6 +5,23 @@ if ('serviceWorker' in navigator) {
         .catch(err => console.log('SW ошибка:', err));
 }
 
+// Индикатор оффлайн
+const offlineIndicator = document.getElementById('offlineIndicator');
+
+function updateOnlineStatus() {
+    if (navigator.onLine) {
+        offlineIndicator.style.display = 'none';
+    } else {
+        offlineIndicator.style.display = 'block';
+    }
+}
+
+window.addEventListener('online', updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
+
+// Проверка при загрузке
+updateOnlineStatus();
+
 // Расчёт топлива
 function calculateFuel(distance, cityRate, roadRate, cityProp = 0.3, roadProp = 0.7) {
     const cityDistance = distance * cityProp;
