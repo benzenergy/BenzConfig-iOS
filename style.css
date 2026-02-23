@@ -2,6 +2,21 @@
     display: none;
 }
 
+#offlineIndicator {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #252525;
+    color: #fff;
+    padding: 6px 14px;
+    border: 1px solid #535353;
+    border-radius: 6px;
+    font-size: 12px;
+    display: none;
+    z-index: 9999;
+}
+
 html {
     scrollbar-width: none;
 }
