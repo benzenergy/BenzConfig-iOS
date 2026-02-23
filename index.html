@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>BenzConfig</title>
     <link rel="icon" href="res/logo_tab.svg" type="image/svg+xml">
-    <!-- <link rel="apple-touch-icon" href="res/logo_main.svg"> -->
     <link rel="apple-touch-icon" href="res/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="manifest" href="manifest.json">
@@ -28,10 +27,8 @@
     <button class="calc-button" onclick="calcWinter()"> <span>Рассчитать</span> </button>
     <div id="winterResult" class="output-box"></div>
     <button id="btnAbout">i</button>
-    
-    <div id="offlineIndicator">Нет подключения к интернету</div>
-    
 </div>
+<div id="offlineIndicator">Нет подключения к интернету</div>
 
 <script src="app.js" defer></script>
 <script>
@@ -50,5 +47,6 @@ window.addEventListener('load', () => {
     }, 700);
 });
 </script>
+    
 </body>
 </html>
