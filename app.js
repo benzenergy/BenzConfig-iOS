@@ -1,3 +1,10 @@
+// Service Worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('SW зарегистрирован'))
+        .catch(err => console.log('SW ошибка:', err));
+}
+
 // Расчёт топлива
 function calculateFuel(distance, cityRate, roadRate, cityProp = 0.3, roadProp = 0.7) {
     const cityDistance = distance * cityProp;
